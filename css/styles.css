@@ -12,6 +12,7 @@
   --button-secondary-bg-color: #f5f4fa;
   --bg-color: #2f303a;
   --line-header-color: #ececec;
+  --main-svg-fill: #afb1b8;
 }
 
 body {
@@ -32,6 +33,11 @@ a {
   margin: 0;
   list-style: none;
 }
+
+.link {
+  display: block;
+}
+
 /* общие стили для оформления контейнеров */
 .container {
   margin-left: auto;
@@ -139,8 +145,6 @@ a {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  display: block;
-
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -148,11 +152,12 @@ a {
 }
 
 .nav-link:hover,
-.contacts-header:hover,
+.contacts-item:hover,
 .contacts-footer:hover,
 .nav-link:focus,
-.contacts-header:focus,
+.contacts-item:focus,
 .contacts-footer:focus {
+  fill: var(--accent-color);
   color: var(--accent-color);
 }
 
@@ -162,17 +167,35 @@ a {
 
 .contacts-nav {
   margin-left: auto;
-
+  align-items: center;
   display: inline-flex;
 }
 
 .contacts-header {
-  align-items: center;
-
-  color: var(--main-text-color);
+  color: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
+
+  color: var(--main-text-color);
+  fill: var(--main-text-color);
+}
+
+.icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: inherit;
+}
+
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
 }
 
 /* Оформление секции-герой */
@@ -239,13 +262,32 @@ a {
   display: none;
 }
 
+/* Оформление списка особенностей компании */
 .advantages-list {
   display: flex;
 }
 
+/* Оформление элементов списка особенностей компании */
 .advantages-item {
   width: calc((100% - 90px) / 4);
   justify-content: center;
+}
+/* Оформление иконок особенностей компании */
+.icon-advantages-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--button-secondary-bg-color);
+  border-radius: 4px;
+}
+
+.icon-advantages {
+  width: 65px;
+  height: 70px;
 }
 
 /* Оформление заголовков секции особенности компании */
@@ -317,16 +359,30 @@ a {
   margin-right: 10px;
 }
 
-.sw-link {
+.sw-list-item {
   padding: 12px;
-  display: block;
   width: 44px;
   height: 44px;
 
   text-align: center;
+  background-color: inherit;
+  fill: var(--main-svg-fill);
 
   border-radius: 50%;
-  background-color: red;
+}
+
+.sw-list-item:hover,
+.sw-list-item:focus,
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--second-accent-color);
+}
+
+.icon-link {
+  width: 20px;
+  height: 20px;
+  fill: inherit;
 }
 
 .clients-list {
@@ -334,6 +390,9 @@ a {
 }
 
 .clients-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 90px;
 
@@ -341,10 +400,12 @@ a {
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--second-accent-color);
+  fill: var(--main-svg-fill);
 }
 
-.clients-link {
-  display: block;
+.icon-clients-link {
+  width: 44px;
+  height: 49px;
 }
 
 /* Оформление контейнера в футере */
