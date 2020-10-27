@@ -359,7 +359,7 @@ a {
   margin-right: 10px;
 }
 
-.sw-list-item {
+.sw-link {
   padding: 12px;
   width: 44px;
   height: 44px;
@@ -371,9 +371,9 @@ a {
   border-radius: 50%;
 }
 
-.sw-list-item:hover,
-.sw-list-item:focus,
+.sw-link:hover,
 .icon-link:hover,
+.sw-link:focus,
 .icon-link:focus {
   background-color: var(--accent-color);
   fill: var(--second-accent-color);
@@ -389,23 +389,61 @@ a {
   display: inline-flex;
 }
 
-.clients-list-item {
+/* Оформление списка клиентов */
+.clients-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 90px;
 
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--main-svg-fill);
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--second-accent-color);
   fill: var(--main-svg-fill);
 }
 
-.icon-clients-link {
+.icon-clients {
+  fill: inherit;
+}
+
+.icon-clients:hover,
+.clients-link:hover,
+.icon-clients:focus,
+.clients-link:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.icon-client-yanco {
   width: 44px;
   height: 49px;
+}
+
+.icon-client-tiglinehere {
+  width: 40px;
+  height: 52px;
+}
+
+.icon-client-company {
+  width: 41px;
+  height: 42.6px;
+}
+
+.icon-client-fosterpeters {
+  width: 79.66px;
+  height: 42px;
+}
+
+.icon-client-brand {
+  width: 59px;
+  height: 47px;
+}
+
+.icon-client-tigline {
+  width: 88.48px;
+  height: 45.44px;
 }
 
 /* Оформление контейнера в футере */
@@ -418,7 +456,7 @@ a {
 /* Оформление контактов */
 .footer-list {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .footer-list-item:not(:last-child) {
   margin-right: 70px;
@@ -457,11 +495,20 @@ a {
 
 .sw-foter-title {
   margin-bottom: 20px;
+  padding-top: 12px;
 
   font-size: 14px;
   line-height: 1.143;
   text-transform: uppercase;
   color: inherit;
+}
+
+.sw-footer-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-footer-link {
+  fill: var(--second-accent-color);
 }
 
 /* Стили для portfolio */
@@ -513,6 +560,12 @@ a {
 
   background-color: var(--second-accent-color);
   border: 1px solid #eeeeee;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list-item:not(:nth-child(3n)) {
