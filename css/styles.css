@@ -152,10 +152,10 @@ a {
 }
 
 .nav-link:hover,
-.contacts-item:hover,
+.contacts-header:hover,
 .contacts-footer:hover,
 .nav-link:focus,
-.contacts-item:focus,
+.contacts-header:focus,
 .contacts-footer:focus {
   fill: var(--accent-color);
   color: var(--accent-color);
@@ -172,6 +172,12 @@ a {
 }
 
 .contacts-header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+
   color: inherit;
   font-weight: 500;
   line-height: 1.14;
@@ -179,17 +185,18 @@ a {
 }
 
 .contacts-item {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 
   color: var(--main-text-color);
   fill: var(--main-text-color);
 }
 
 .icon {
+  margin-right: 10px;
   width: 16px;
   height: 12px;
-  margin-right: 10px;
+
   fill: inherit;
 }
 
@@ -225,6 +232,7 @@ a {
 .hero-title {
   margin-top: 0px;
   margin-bottom: 30px;
+  max-width: 696px;
 
   color: var(--second-accent-color);
   font-weight: 900;
@@ -408,12 +416,13 @@ a {
   fill: inherit;
 }
 
-.icon-clients:hover,
 .clients-link:hover,
-.icon-clients:focus,
-.clients-link:focus {
+.icon-clients:hover,
+.clients-link:focus,
+.icon-clients:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
+  outline: none;
 }
 
 .icon-client-yanco {
